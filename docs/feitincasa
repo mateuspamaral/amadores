@@ -1,0 +1,25 @@
+Feitin casa
+
+As a <ROLE>     [guest, user]
+I can <ACTION>
+So that <VALUE>
+
+As a guest I can view offers
+As a guest I can sign up
+As a guest I can sign in
+As a user I can view offers
+As a user I can log out
+As a user I can buy an offer
+As a user I can donate an offer
+As a user I can sell an offer
+As a user I can update my profile information
+As a user I can CRUD my offer
+As a user I can talk to other users
+As a user I can review an offer
+As a user I can report an offer
+As a user I can block another user
+
+rails new feitin_casa \
+  --database postgresql \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/rails-51/minimal.rb \
+  rbnb
