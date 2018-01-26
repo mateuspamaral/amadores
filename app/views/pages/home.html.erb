@@ -1,37 +1,75 @@
 <h1>Amadores</h1>
 
-<div class="banner-container">
-
-  <div class="banner banner-top banner-gradient text-center" style="background-image: url(<%= asset_path 'estampa.jpg' , height: 200 %>)">
-
-    <div class="banner-gradient-shadow home"></div>
-    <div class="banner-content">
-      <h1>Feito em casa - Compartilhe seus dons</h1>
-      <h2>
-        Alguem <strong>perto de você</strong>
-      </h2>
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path 'estampa.jpg'%>);">
+      <div class="banner-content">
+        <h1>WELCOME HOME</h1>
+        <p>Feito em casa, compartilhado com o mundo.</p>
+        <a class="btn-treehouse btn-lg">Start now</a>
+      </div>
     </div>
-  </div>
-</div>
 
- <div class="row">
-  <div class="col-xs-12 col-sm-4">
-    <!-- insert <div class="card"> -->
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_path 'yogurt.jpg' , height: 200 %>);">
-    <div class="card-category">Popular</div>
-    <div class="card-description">
-      <h2>Melhor Iogurte do Sion</h2>
-      <p>cremoso e fresquinho</p>
+<div class="container">
+      <h2 class="text-center">Alguem faz perto de você</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url(<%= asset_path'yogurt.jpg'%>);">
+            <span class="card-category">Alimentos</span>
+            <div class="card-description">
+              <h2>Iogurte</h2>
+              <p>Melhor iogurte do Sion</p>
+            </div>
+            <!-- <img class="card-user avatar avatar-large" src="images/jad.png"> -->
+            <a class="card-link" href="#"></a>
+          </div>
+          <div class="card-footer">
+            <p>Posted on 26/01/18</p>
+            <div class="controls">
+              <a href="#"><i class="fa fa-star"></i></a>
+              <a href="#"><i class="fa fa-heart"></i></a>
+              <a href="#"><i class="fa fa-share"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url(<%= asset_path'Honey.jpg'%>);">
+            <span class="card-category">Mel</span>
+            <div class="card-description">
+              <h2>Melzao do tulio</h2>
+              <p>Abelhas saudaveis</p>
+            </div>
+            <!-- <img class="card-user avatar avatar-large" src="images/gab.png"> -->
+            <a class="card-link" href="#"></a>
+          </div>
+          <div class="card-footer">
+            <p>Posted on 26/01/18</p>
+            <div class="controls">
+              <a href="#"><i class="fa fa-star"></i></a>
+              <a href="#"><i class="fa fa-heart"></i></a>
+              <a href="#"><i class="fa fa-share"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url(<%= asset_path'cebolinha.jpg'%>);">
+            <span class="card-category">Cebolinha</span>
+            <div class="card-description">
+              <h2>Cebolinha Verdinha</h2>
+              <p>Plantada em canteiro du bao</p>
+            </div>
+            <!-- <img class="card-user avatar avatar-large" src="images/cecile.png"> -->
+            <a class="card-link" href="#"></a>
+          </div>
+          <div class="card-footer">
+            <p>Posted on 26/01/18</p>
+            <div class="controls">
+              <a href="#"><i class="fa fa-star"></i></a>
+              <a href="#"><i class="fa fa-heart"></i></a>
+              <a href="#"><i class="fa fa-share"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
-    <a class="card-link" href="#" ></a>
-  </div>
-  </div>
-  <div class="col-xs-12 col-sm-4">
-    <!-- insert <div class="card"> -->
-  </div>
-  <div class="col-xs-12 col-sm-4">
-    <!-- insert <div class="card"> -->
   </div>
 </div>
 <p></p>
