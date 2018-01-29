@@ -16,6 +16,7 @@ user_attributes = [
 User.create!(user_attributes)
 
 Offer.destroy_all
+
 offer_attributes = [
 {title: "Cebolinha", description: "Da hora essa cebolinha", photo: "", address: "Sion", available: "true", price: "2,40", user_id: "1"},
 {title: "Cerveja", description: "IPA do Cajuru", photo: "", address: "Alto Barroca", available: "true", price: "22", user_id: "1"},
@@ -25,5 +26,3 @@ offer_attributes = [
 ]
 
 Offer.create!(offer_attributes)
-
-
