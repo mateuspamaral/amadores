@@ -2,7 +2,7 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :destroy]
 
   def index
-    @offers = Offer.where.not(user: current_user)
+    @offers = Offer.all
   end
 
   def my_offers
