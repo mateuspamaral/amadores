@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :offers do
     collection do
-      get 'my_offers', to: "offer#my_offers"
+      get 'my_offers', to: "offers#my_offers"
     end
   end
 end
