@@ -10,6 +10,7 @@ class OffersController < ApplicationController
   end
 
   def new
+    @user = User.find(params[:user_id])
     @offer = Offer.new
   end
 
