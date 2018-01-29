@@ -2,20 +2,23 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :destroy]
 
   def index
-    @offers = Offer.all
+    @offers = Offer.where.not(user: current_user)
+  end
+
+  def my_offers
+    @my_offers = Offer.where(user: current_user)
   end
 
   def show
-    @offer = Offer.find(params[:id])
   end
 
   def new
-    @user = User.find(params[:user_id])
     @offer = Offer.new
   end
 
   def create
     @offer = Offer.new(offer_params)
+    @offer.user = current_user
     if @offer.save
       redirect_to offer_path(@offer)
     else
@@ -24,7 +27,6 @@ class OffersController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -42,6 +44,6 @@ class OffersController < ApplicationController
   end
 
   def set_offer
-    @offer = Offer.find(params[:id])
+    @offer = Offer.find(current_user)
   end
 end
