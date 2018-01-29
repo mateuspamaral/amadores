@@ -30,7 +30,7 @@ class OffersController < ApplicationController
   end
 
   def update
-    @offer.update(params[:offer])
+    @offer.update(offer_params)
   end
 
   def destroy
