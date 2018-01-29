@@ -6,16 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
 user_attributes = [
-{name: "Estevao", email: "estevaoc@hotmail.com", mobile: "980402010", photo: "", password:"brilhabrilhaestrelinha"},
-{name: "Mateus", email: "mateuspamaral@gmail.com", mobile: "987049498", photo: "", password:"querovervocebrilhar"},
-{name: "Renata", email: "sanguedebarata@gmail.com", mobile: "984546912", photo: "", password:"fazdecontaqueehsohminha"}
+
+{name: "Estevao", email: "estevaoc@hotmail.com", mobile: "980402010", photo: "http://res.cloudinary.com/dsy72pcut/image/upload/v1517245667/Amadores/estevao_cq5wdv.jpg", password:"123456"},
+{name: "Mateus", email: "mateuspa@gmail.com", mobile: "987049498", photo: "http://res.cloudinary.com/dsy72pcut/image/upload/v1517245667/Amadores/mateus_f5jvew.jpg", password:"123456"},
+{name: "Renata", email: "asadebarata@gmail.com", mobile: "984546912", photo: "http://res.cloudinary.com/dsy72pcut/image/upload/v1517245667/Amadores/renata_vzvtch.jpg", password:"splift"}
 ]
 
 User.create!(user_attributes)
-
-Offer.destroy_all
 
 offer_attributes = [
 {title: "Cebolinha", description: "Da hora essa cebolinha", photo: "", address: "Sion", available: "true", price: "2,40", user_id: "1"},
