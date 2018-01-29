@@ -5,17 +5,20 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
+  def my_offers
+    @my_offers = Offer.where(user: current_user)
+  end
+
   def show
-    @offer = Offer.find(params[:id])
   end
 
   def new
-    @user = User.find(params[:user_id])
     @offer = Offer.new
   end
 
   def create
     @offer = Offer.new(offer_params)
+    @offer.user = current_user
     if @offer.save
       redirect_to offer_path(@offer)
     else
@@ -24,7 +27,6 @@ class OffersController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
