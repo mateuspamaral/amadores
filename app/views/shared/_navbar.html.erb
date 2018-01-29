@@ -10,8 +10,8 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Add a Offer", "offers_new_path", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Profile", "users_show_path", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Add a Offer", new_offer_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Profile", edit_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
 
       <!-- Avatar with dropdown menu -->
