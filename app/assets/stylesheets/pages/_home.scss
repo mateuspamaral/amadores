@@ -53,6 +53,7 @@ body {
     border-radius: 1px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
+    width: 100px;
 }
 
 .card-body {
@@ -68,4 +69,37 @@ body {
     justify-content: space-between;
     padding: 10px;
 }
+
+.footer {
+    background: #F4F4F4;
+    display: flex;
+    box-align: center;
+    align-items: center;
+    box-pack: justify;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0px 50px;
+    color: rgba(0,0,0,0.3);
+}
+
+.footer-links {
+    display: flex;
+  }
+
+.footer-links a {
+    color: black;
+    opacity: 0.15;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+  }
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+  }
+
+
 

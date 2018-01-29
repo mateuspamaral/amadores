@@ -1,4 +1,4 @@
-<h1>Amadores</h1>
+<%= content_for :title, "Amadores" %>
 
 <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path 'estampa.jpg'%>);">
       <div class="banner-content">
@@ -32,7 +32,7 @@
         </div>
         <div class="card">
           <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url(<%= asset_path'Honey.jpg'%>);">
-            <span class="card-category">Mel</span>
+            <span class="card-category">Alimentos</span>
             <div class="card-description">
               <h2>Melzao do tulio</h2>
               <p>Abelhas saudaveis</p>
@@ -51,7 +51,7 @@
         </div>
         <div class="card">
           <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url(<%= asset_path'cebolinha.jpg'%>);">
-            <span class="card-category">Cebolinha</span>
+            <span class="card-category">Alimentos</span>
             <div class="card-description">
               <h2>Cebolinha Verdinha</h2>
               <p>Plantada em canteiro du bao</p>
@@ -68,8 +68,39 @@
             </div>
           </div>
         </div>
+        <div class="card">
+          <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url(<%= asset_path'cerveja.jpg'%>);">
+            <span class="card-category">Bebidas</span>
+            <div class="card-description">
+              <h2>Biritz</h2>
+              <p>Mulheres cervejeiras</p>
+            </div>
+            <!-- <img class="card-user avatar avatar-large" src="images/gab.png"> -->
+            <a class="card-link" href="#"></a>
+          </div>
+          <div class="card-footer">
+            <p>Posted on 27/01/18</p>
+            <div class="controls">
+              <a href="#"><i class="fa fa-star"></i></a>
+              <a href="#"><i class="fa fa-heart"></i></a>
+              <a href="#"><i class="fa fa-share"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fa fa-github"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This page is made with <i class="fa fa-heart"></i> by Extrema
   </div>
 </div>
 <p></p>
