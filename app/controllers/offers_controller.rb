@@ -1,21 +1,24 @@
 class OffersController < ApplicationController
-  before_action :set_offer, only: [:show, :destroy]
+  before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
   def index
     @offers = Offer.all
   end
 
+  def my_offers
+    @my_offers = Offer.where(user: current_user)
+  end
+
   def show
-    @offer = Offer.find(params[:id])
   end
 
   def new
-    @user = User.find(params[:user_id])
     @offer = Offer.new
   end
 
   def create
     @offer = Offer.new(offer_params)
+    @offer.user = current_user
     if @offer.save
       redirect_to offer_path(@offer)
     else
@@ -24,15 +27,15 @@ class OffersController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
+    @offer.update(offer_params)
   end
 
   def destroy
     @offer = Offer.destroy
-    redirect_to user_offer_index(@offer.seller_id)
+    # redirect_to ()
   end
 
   private

@@ -1,2 +1,13 @@
-<h1>Offers#new</h1>
-<p>Find me in app/views/offers/new.html.erb</p>
+
+<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+<h2>Eu faço</h2>
+<%= simple_form_for (@offer) do |f| %>
+  <%= f.input :title, label: 'Título' %>
+   <%= f.input :address, label: 'Endereço' %>
+  <%= f.input :description, label: 'Descriçao' %>
+  <%= f.input :available, label: 'Disponivel' %>
+  <%= f.input :price, label: 'Preço' %>
+  <%= f.input :photo, label: 'Foto' %>
+  <%= f.submit "Ofertar", class: "btn btn-primary" %>
+<% end %>
+</div>
