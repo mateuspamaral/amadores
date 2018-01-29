@@ -1,4 +1,4 @@
-Feitin casa
+Amadores - Feitin casa
 
 As a <ROLE>     [guest, user]
 I can <ACTION>
@@ -19,7 +19,9 @@ As a user I can review an offer
 As a user I can report an offer
 As a user I can block another user
 
-rails new feitin_casa \
+rails new \
   --database postgresql \
-  -m https://raw.githubusercontent.com/lewagon/rails-templates/rails-51/minimal.rb \
-  rbnb
+  --webpack \
+  m https://raw.githubusercontent.com/lewagon/rails-templates/master/devise.rb
+  amadores
+
