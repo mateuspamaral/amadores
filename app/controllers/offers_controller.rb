@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  before_action :set_offer, only: [:show, :destroy]
+  before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
   def index
     @offers = Offer.all
@@ -30,11 +30,12 @@ class OffersController < ApplicationController
   end
 
   def update
+    @offer.update(params[:offer])
   end
 
   def destroy
     @offer = Offer.destroy
-    redirect_to user_offer_index(@offer.seller_id)
+    # redirect_to ()
   end
 
   private
@@ -44,6 +45,6 @@ class OffersController < ApplicationController
   end
 
   def set_offer
-    @offer = Offer.find(current_user)
+    @offer = Offer.find(params[:id])
   end
 end
