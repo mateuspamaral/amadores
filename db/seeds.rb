@@ -6,9 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+user_attributes = [
+{name: "Estevao", email: "estevaoc@hotmail.com", mobile: "980402010", photo: "", password:"brilhabrilhaestrelinha"},
+{name: "Mateus", email: "mateuspamaral@gmail.com", mobile: "987049498", photo: "", password:"querovervocebrilhar"},
+{name: "Renata", email: "sanguedebarata@gmail.com", mobile: "984546912", photo: "", password:"fazdecontaqueehsohminha"}
+]
+
+User.create!(user_attributes)
+
 Offer.destroy_all
-Offer.new (:title "Cebolinha", :description "Da hora essa cebolinha", :photo "", :address "Sion", :available "true", :price "2,40", :seller_id "1")
-Offer.new (:title "Cerveja", :description "IPA do Cajuru", :photo "", :address "Alto Barroca", :available "true", :price "22", :seller_id "1")
-Offer.new (:title "Bolo", :description "Trufado com granulados", :photo "", :address "Gutierrez", :available "true", :price "15,80", :seller_id "2")
-Offer.new (:title "Iogurte", :description "", :photo "", :address "Pampulha", :available "true", :price "7,90", :seller_id "2")
-Offer.new (:title "Mel", :description "", :photo "", :address "Carmo", :available "true", :price "8", :seller_id "3")
+offer_attributes = [
+{title: "Cebolinha", description: "Da hora essa cebolinha", photo: "", address: "Sion", available: "true", price: "2,40", user_id: "1"},
+{title: "Cerveja", description: "IPA do Cajuru", photo: "", address: "Alto Barroca", available: "true", price: "22", user_id: "1"},
+{title: "Bolo", description: "Trufado com granulados", photo: "", address: "Gutierrez", available: "true", price: "15,80", user_id: "2"},
+{title: "Iogurte", description: "", photo: "", address: "Pampulha", available: "true", price: "7,90", user_id: "2"},
+{title: "Mel", description: "", photo: "", address: "Carmo", available: "true", price: "8", user_id: "3"}
+]
+
+Offer.create!(offer_attributes)
+
+
