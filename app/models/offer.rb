@@ -6,7 +6,7 @@ class Offer < ApplicationRecord
   belongs_to :user
 
   #Validations
-  validates :title, :photo, :address, presence: true
+  validates :title, :address, presence: true
 
   #add geocode to address columns
   geocoded_by :address

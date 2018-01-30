@@ -14,17 +14,11 @@ User.create!(user_attributes)
 
 offer_attributes = [
 
-{title: "Cebolinha", description: "Da hora essa cebolinha", photo: "image/upload/v1517333017/cebolinha_j7ia8q.jpg", address: "Sion", available: "true", price: "2,40", user_id: "1"},
-{title: "Cerveja", description: "IPA do Cajuru", photo: "image/upload/v1517333017/cerveja_uxekns.jpg", address: "Alto Barroca", available: "true", price: "22", user_id: "1"},
-{title: "Bolo", description: "Trufado com granulados", photo: "image/upload/v1517337292/43682_original_xmob6f.jpg", address: "Gutierrez", available: "true", price: "15,80", user_id: "2"},
-{title: "Iogurte", description: "", photo: "image/upload/v1517333021/yogurt_ayrgti.jpg", address: "Pampulha", available: "false", price: "7,90", user_id: "2"},
-{title: "Mel", description: "", photo: "image/upload/v1517333025/Honey_obtwaz.jpg", address: "Carmo", available: "true", price: "8", user_id: "3"}
-
-{title: "Cebolinha", category: "Alimentos", description: "Da hora essa cebolinha", photo: "", address: "Sion", available: "true", price: "2,40", user_id: "1"},
-{title: "Cerveja", category: "Bebidas", description: "IPA do Cajuru", photo: "", address: "Alto Barroca", available: "true", price: "22", user_id: "1"},
-{title: "Bolo", category: "Alimentos", description: "Trufado com granulados", photo: "", address: "Gutierrez", available: "true", price: "15,80", user_id: "2"},
-{title: "Iogurte", category: "Alimentos", description: "", photo: "", address: "Pampulha", available: "true", price: "7,90", user_id: "2"},
-{title: "Mel", category: "Alimentos", description: "", photo: "", address: "Carmo", available: "true", price: "8", user_id: "3"}
+{title: "Cebolinha", category: "Alimentos", description: "Da hora essa cebolinha", photo: "image/upload/v1517333017/cebolinha_j7ia8q.jpg", address: "Sion", available: "true", price: "2,40", user_id: "1", latitude: -19.9536969, longitude: -43.9439711 },
+{title: "Cerveja", category: "Bebidas", description: "IPA do Cajuru", photo: "image/upload/v1517333017/cerveja_uxekns.jpg", address: "Alto Barroca", available: "true", price: "22", user_id: "1", latitude: -19.9335781, longitude: -43.9731241 },
+{title: "Bolo", category: "Alimentos", description: "Trufado com granulados", photo: "image/upload/v1517337292/43682_original_xmob6f.jpg", address: "Gutierrez", available: "true", price: "15,80", user_id: "2", latitude: -19.939649, longitude: -43.966599 },
+{title: "Iogurte", category: "Alimentos", description: "", photo: "image/upload/v1517333021/yogurt_ayrgti.jpg", address: "Pampulha", available: "false", price: "7,90", user_id: "2", latitude: -19.8528418, longitude: -43.9598869 },
+{title: "Mel", category: "Alimentos", description: "", photo: "image/upload/v1517333025/Honey_obtwaz.jpg", address: "Carmo", available: "true", price: "8", user_id: "3", latitude: -19.9432183, longitude: -43.9362755 }
 
 ]
 
