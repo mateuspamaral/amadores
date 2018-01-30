@@ -2,7 +2,14 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
   def index
-    @offers = Offer.where(available: true)
+    @offers = Offer.where.not(available: false, latitude: nil, longitude: nil)
+
+    @markers = @offers.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude
+      }
+    end
   end
 
   def my_offers
@@ -41,7 +48,7 @@ class OffersController < ApplicationController
   private
 
   def offer_params
-    params.require(:offer).permit(:title, :description, :photo, :address, :available, :price)
+    params.require(:offer).permit(:title, :category, :description, :photo, :address, :available, :price)
   end
 
   def set_offer
