@@ -4,6 +4,13 @@
 <h2>Eu faço</h2>
 <%= simple_form_for (@offer) do |f| %>
   <%= f.input :title, label: 'Título' %>
+  <%= f.input :category, label: 'Categoria', :collection => %w[Alimentos
+                                                               Artesanátos
+                                                               Bebidas
+                                                               Brinquedos
+                                                               Papelaria
+                                                               Vestuário
+                                                               Outros] %>
   <%= f.input :address, label: 'Endereço' %>
   <%= f.input :description, label: 'Descriçao' %>
   <%= f.input :available, label: 'Disponivel' %>

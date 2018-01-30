@@ -11,4 +11,18 @@ class Offer < ApplicationRecord
   #add geocode to address columns
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  validates :category,
+            presence: true,
+            inclusion: { in: [
+                              "Alimentos",
+                              "Bebidas",
+                              "Artesanátos",
+                              "Vestuário",
+                              "Papelaria",
+                              "Brinquedos",
+                              "Outros",
+                             ]
+                       }
 end
+
