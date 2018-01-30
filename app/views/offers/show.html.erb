@@ -1,14 +1,26 @@
 <%= content_for :title, "Minha oferta" %>
 
-<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-<h2>Minha oferta</h2>
-<%= simple_form_for (@offer) do |f| %>
-  <%= f.input :title, label: 'Título' %>
-  <%= f.input :address, label: 'Endereço' %>
-  <%= f.input :description, label: 'Descriçao' %>
-  <%= f.input :available, label: 'Disponivel' %>
-  <%= f.input :price, label: 'Preço' %>
-  <%= f.input :photo, label: 'Foto' %>
-  <%= f.submit "Alterar", class: "btn btn-primary" %>
-<% end %>
+
+<div class="row">
+  <div class="col-md-6 top">
+  <h1><%= @offer.title %></h1>
+  <p><%= @offer.description %></p>
+  <hr>
+  <p><%= @offer.price %></p>
+    <div class="userinfo"
+    <p><%= @offer.user.photo %></p>
+    <%= cl_image_tag @offer.user.photo, height: 50, width: 50 %>
+    <p><%= @offer.user.mobile %></p>
+    </div>
+    <div class="col-md-8">
+      <button type="button" class="botaum" aria-busy="false">
+        <span class="_16c9pko4">
+          <span>Eu quero</span>
+        </span>
+      </button>
+    </div>
 </div>
+<div class="col-md-6">
+<p><%= @offer.photo %></p>
+<%= cl_image_tag @offer.photo, height: 300, width: 400, crop: :fill %>
+</div></div>
