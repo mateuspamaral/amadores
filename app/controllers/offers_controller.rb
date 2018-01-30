@@ -2,7 +2,14 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
   def index
-    @offers = Offer.where(available: true)
+    @offers = Offer.where.not(available: false, latitude: nil, longitude: nil)
+
+    @markers = @offers.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def my_offers

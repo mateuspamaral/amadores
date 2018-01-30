@@ -1,7 +1,6 @@
 puts("Creating users")
 
 user_attributes = [
-
 {name: "Estevao", email: "estevaoc@hotmail.com", mobile: "980402010", remote_photo_url: "http://res.cloudinary.com/dsy72pcut/image/upload/v1517245667/Amadores/estevao_cq5wdv.jpg", password:"123456"},
 {name: "Mateus", email: "mateuspa@gmail.com", mobile: "987049498", remote_photo_url: "http://res.cloudinary.com/dsy72pcut/image/upload/v1517245667/Amadores/mateus_f5jvew.jpg", password:"123456"},
 {name: "Renata", email: "asadebarata@gmail.com", mobile: "984546912", remote_photo_url: "http://res.cloudinary.com/dsy72pcut/image/upload/v1517245667/Amadores/renata_vzvtch.jpg", password:"splift"}
