@@ -19,7 +19,7 @@ offer_attributes = [
 {title: "Cebolinha", description: "Da hora essa cebolinha", photo: "", address: "Sion", available: "true", price: "2,40", user_id: "1"},
 {title: "Cerveja", description: "IPA do Cajuru", photo: "", address: "Alto Barroca", available: "true", price: "22", user_id: "1"},
 {title: "Bolo", description: "Trufado com granulados", photo: "", address: "Gutierrez", available: "true", price: "15,80", user_id: "2"},
-{title: "Iogurte", description: "", photo: "", address: "Pampulha", available: "true", price: "7,90", user_id: "2"},
+{title: "Iogurte", description: "", photo: "", address: "Pampulha", available: "false", price: "7,90", user_id: "2"},
 {title: "Mel", description: "", photo: "", address: "Carmo", available: "true", price: "8", user_id: "3"}
 ]
 
