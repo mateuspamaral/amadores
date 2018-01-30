@@ -2,7 +2,7 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
   def index
-    @offers = Offer.all
+    @offers = Offer.where(available: true)
   end
 
   def my_offers
@@ -35,7 +35,7 @@ class OffersController < ApplicationController
 
   def destroy
     @offer = Offer.destroy
-    # redirect_to ()
+    redirect_to my_offers_offers
   end
 
   private
