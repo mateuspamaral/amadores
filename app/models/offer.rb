@@ -7,4 +7,17 @@ class Offer < ApplicationRecord
 
   #Validations
   validates :title, :photo, :address, presence: true
+  validates :category,
+            presence: true,
+            inclusion: { in: [
+                              "Alimentos",
+                              "Bebidas",
+                              "Artesanátos",
+                              "Vestuário",
+                              "Papelaria",
+                              "Brinquedos",
+                              "Outros",
+                             ]
+                       }
 end
+
