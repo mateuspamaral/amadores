@@ -1,4 +1,23 @@
 <h1>Minhas Ofertas</h1>
 <% @my_offers.each do |offer| %>
-  <p><%= offer.title %></p>
+  <div class="container">
+    <div class="cards">
+      <%= link_to(offer) do %>
+        <div class="card">
+          <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path offer.photo %>')">
+            <span class="card-category"><%= offer.category %></span>
+            <div class="card-description">
+              <h2><%= offer.title %></h2>
+              <p><%= offer.description %></p>
+            </div>
+            <!-- <img class="card-user avatar avatar-large" src="images/jad.png"> -->
+            <a class="card-link" href="#"></a>
+          </div>
+          <div class="card-footer">
+            <p>Posted on <%= offer.created_at.strftime("%d/%m/%Y") %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 <% end %>
