@@ -4,10 +4,10 @@ class OffersController < ApplicationController
   def index
     @offers = Offer.where.not(available: false, latitude: nil, longitude: nil)
 
-    @markers = @offers.map do |flat|
+    @markers = @offers.map do |offer|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: offer.latitude,
+        lng: offer.longitude
       }
     end
   end
