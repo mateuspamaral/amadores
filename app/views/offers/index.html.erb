@@ -1,24 +1,27 @@
 <h1>Todas Ofertas</h1>
 
-<% @offers.each do |offer| %>
-  <div class="container">
-    <div class="cards">
-      <div class="card">
-        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path offer.photo %>')">
-          <span class="card-category"><%= offer.category %></span>
-          <div class="card-description">
-            <h2><%= offer.title %></h2>
-            <p><%= offer.description %></p>
-          </div>
-          <!-- <img class="card-user avatar avatar-large" src="images/jad.png"> -->
-          <a class="card-link" href="#"></a>
-        </div>
-        <div class="card-footer">
-          <p>Posted on <%= offer.created_at.strftime("%d/%m/%Y") %></p>
+<!-- <div class="col-xs-3 col-xs-3 container"> -->
 
+      <div class="row">
+        <% @offers.each do |offer| %>
+        <div class="col-md-3">
+        <div class="card">
+          <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path offer.photo %>')">
+            <span class="card-category"><%= offer.category %></span>
+            <div class="card-description">
+              <h2><%= offer.title %></h2>
+
+            </div>
+            <!-- <img class="card-user avatar avatar-large" src="images/jad.png"> -->
+            <a class="card-link" href="#"></a>
+          </div>
+          <div class="card-footer">
+            <p>Posted on <%= offer.created_at.strftime("%d/%m/%Y") %></p>
+             <p><%= offer.address %></p>
+          </div>
         </div>
+        </div>
+        <% end %>
       </div>
 
-    </div>
-  </div>
-<% end %>
+<!-- </div> -->
