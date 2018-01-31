@@ -6,10 +6,10 @@
   <p>R$ <%= @offer.price %></p>
     <div class="userinfo">
     <%= cl_image_tag @offer.user.photo, height: 50, width: 50, class: 'img-user' %>
-    <p><%= @offer.user.mobile %></p>
+    <p class ="hidden1" id="mobile"><%= @offer.user.mobile %></p>
     </div>
     <div class="col-md-8">
-      <button type="button" class="botaum" aria-busy="false">
+      <button type="button" class="botaum" aria-busy="false" onclick="my_function()">
         <span class="_16c9pko4">
           <span>Eu quero</span>
         </span>
