@@ -42,8 +42,8 @@ class OffersController < ApplicationController
   end
 
   def destroy
-    @offer = Offer.destroy
-    redirect_to my_offers_offers
+    @offer.destroy
+    redirect_to my_offers_offers_path
   end
 
   private
