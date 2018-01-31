@@ -17,6 +17,7 @@ class OffersController < ApplicationController
   end
 
   def show
+    @markers = [{ lat: @offer.latitude, lng: @offer.longitude }]
   end
 
   def new
