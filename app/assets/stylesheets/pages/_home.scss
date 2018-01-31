@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 body {
     margin: 0;
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
    // font-family: 'Dangrek', sans-serif;
 }
 
@@ -45,6 +45,7 @@ body {
 
 .cards {
     display: flex;
+    width: 250px;
 }
 
 .card {
@@ -53,7 +54,6 @@ body {
     border-radius: 1px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
-    width: 250px;
 }
 
 .card-body {
@@ -68,6 +68,7 @@ body {
     //align-items: center;
     //justify-content: space-between;
     padding: 10px;
+    height: 75px;
 }
 
 .footer {
@@ -77,8 +78,8 @@ body {
     align-items: center;
     box-pack: justify;
     justify-content: space-between;
-    height: 100px;
-    padding: 0px 50px;
+    height: 10px;
+    padding: 40px 16px;
     color: rgba(0,0,0,0.3);
 }
 
@@ -106,5 +107,7 @@ body {
     text-decoration: none;
   }
 
-
+  #card-home {
+    width: 33%;
+  }
 
