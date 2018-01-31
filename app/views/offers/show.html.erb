@@ -1,14 +1,10 @@
-<%= content_for :title, "Minha oferta" %>
-
 
 <div class="row">
   <div class="col-md-6 top">
   <h1><%= @offer.title %></h1>
   <p><%= @offer.description %></p>
-  <hr>
-  <p><%= @offer.price %></p>
-    <div class="userinfo"
-    <p><%= @offer.user.photo %></p>
+  <p>R$ <%= @offer.price %></p>
+    <div class="userinfo">
     <%= cl_image_tag @offer.user.photo, height: 50, width: 50, class: 'img-user' %>
     <p><%= @offer.user.mobile %></p>
     </div>
@@ -20,7 +16,6 @@
       </button>
     </div>
 </div>
-<div class="col-md-6">
-<p><%= @offer.photo %></p>
-<%= cl_image_tag @offer.photo, height: 300, width: 400, crop: :fill %>
+<div class="col-md-6-6">
+<%= cl_image_tag @offer.photo, height: 400, width: 400, crop: :fill %>
 </div></div>
