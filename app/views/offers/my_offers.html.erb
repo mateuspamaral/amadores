@@ -1,6 +1,6 @@
 <h1>Minhas Ofertas</h1>
 <% @my_offers.each do |offer| %>
-  <div class="container">
+  <div class="col-md-3 container">
     <div class="cards">
       <%= link_to(offer) do %>
         <div class="card">
@@ -14,6 +14,7 @@
           </div>
           <div class="card-footer">
             <p>Posted on <%= offer.created_at.strftime("%d/%m/%Y") %></p>
+            <p><%= offer.address %></p>
           </div>
           <%= link_to offer_path(offer), method: :delete, data: { confirm: "Tem certeza que deseja apagar?" } do %>
             <i class="fa fa-trash-o"></i>  Apagar

@@ -4,7 +4,7 @@
     <h1><%= @offer.title %></h1>
     <p><%= @offer.description %></p>
     <p>R$ <%= @offer.price %></p>
-    <div class="userinfo">
+    <div class="userinfo", style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2))>
     <%= cl_image_tag @offer.user.photo, height: 50, width: 50, class: 'img-user' %>
     <p class ="hidden1" id="mobile"><%= @offer.user.mobile %></p>
     </div>
@@ -15,14 +15,15 @@
         </span>
       </button>
     </div>
+    <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+    ></div>
   </div>
   <div class="col-md-6-6">
     <%= cl_image_tag @offer.photo, height: 400, width: 400, crop: :fill %>
   </div>
-  <div
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-  ></div>
+
 </div>
