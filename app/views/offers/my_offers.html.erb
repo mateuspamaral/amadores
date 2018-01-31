@@ -10,12 +10,14 @@
               <h2><%= offer.title %></h2>
               <p><%= offer.description %></p>
             </div>
-            <!-- <img class="card-user avatar avatar-large" src="images/jad.png"> -->
             <a class="card-link" href="#"></a>
           </div>
           <div class="card-footer">
             <p>Posted on <%= offer.created_at.strftime("%d/%m/%Y") %></p>
           </div>
+          <%= link_to offer_path(offer), method: :delete, data: { confirm: "Tem certeza que deseja apagar?" } do %>
+            <i class="fa fa-trash-o"></i>  Apagar
+          <% end %>
         </div>
       <% end %>
     </div>
