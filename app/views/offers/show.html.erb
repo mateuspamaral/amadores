@@ -1,28 +1,35 @@
-
-<div class="row">
-  <div class="col-md-6 top">
-    <h1><%= @offer.title %></h1>
-    <p><%= @offer.description %></p>
-    <p>R$ <%= @offer.price %></p>
-    <div class="userinfo">
-    <%= cl_image_tag @offer.user.photo, height: 50, width: 50, class: 'img-user' %>
-    <p class ="hidden1" id="mobile"><%= @offer.user.mobile %></p>
+<div class="offer_show_container">
+  <div class="row remove_margin">
+    <div class="col-md-6 remove_margin">
+      <div class="row offer_show_userinfo">
+        <h1><strong><%= @offer.title %></strong></h1>
+        <p><%= @offer.category %></p>
+        <p>Ofertado por <%= @offer.user.name %><%= cl_image_tag @offer.user.photo, height: 50, width: 50, class: 'img-user' %></p>
+      </div>
+      <div class="row offer_show_description">
+        <h3>Descrição:</h3>
+        <p><%= @offer.description %></p>
+      </div>
+      <div class="row offer_show_price">
+        <h3>Preço: </h3>
+        <p>R$ <%= @offer.price %></p>
+      </div>
+      <div class="row offer_show_contact">
+        <h3>Telefone: </h3>
+        <p class ="hidden1" id="mobile"><%= @offer.user.mobile %></p>
+        <button class="botaum" onclick="my_function()">Eu quero</button>
+      </div>
+      <div class="row offer_show_map">
+        <div id="map" style="width: 100%; height: 400px;"
+          data-markers="<%= @markers.to_json %>">
+        </div>
+      </div>
     </div>
-    <div class="col-md-8">
-      <button type="button" class="botaum" aria-busy="false" onclick="my_function()">
-        <span class="_16c9pko4">
-          <span>Eu quero</span>
-        </span>
-      </button>
+    <div class="col-md-6">
+      <div>
+        <%= cl_image_tag @offer.photo, class: "offer_show_photo" , crop: :fill %>
+      </div>
     </div>
   </div>
-  <div class="col-md-6-6">
-    <%= cl_image_tag @offer.photo, height: 400, width: 400, crop: :fill %>
-  </div>
-  <div
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-  ></div>
 </div>
+
