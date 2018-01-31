@@ -4,29 +4,32 @@
       <div class="banner-content">
         <h1>FEITO EM CASA</h1>
         <p>compartilhado com o mundo</p>
-        <a class="btn-treehouse btn-lg">Start now</a>
+        <%= link_to "Ofertas", offers_path, class: "btn-treehouse btn-lg" %>
       </div>
     </div>
 <div class="container">
   <h2 class="text-center">Alguem perto de você faz</h2>
   <div class="row">
-    <div class='col-md-3'>
-      <div class="card">
-        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url(<%= asset_path'yogurt.jpg'%>);">
-          <span class="card-category">Alimentos</span>
-          <div class="card-description">
-            <h2>Iogurte</h2>
-            <p>Melhor iogurte do Sion</p>
+    <% @offers.sample(6).each do |offer| %>
+      <div class='col-md-3 col-sm-4 col-xs-12' id='card-home'>
+        <%= link_to(offer) do %>
+          <div class="card">
+            <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path offer.photo %>');">
+              <span class="card-category"><%= offer.category %></span>
+              <div class="card-description">
+                <h2><%= offer.title %></h2>
+              </div>
+              <!-- <img class="card-user avatar avatar-large" src="images/jad.png"> -->
+              <a class="card-link" href="#"></a>
+            </div>
+            <div class="card-footer">
+              <p>Posted on <%= offer.created_at.strftime("%d/%m/%Y") %></p>
+              <p><%= offer.address %></p>
+            </div>
           </div>
-          <!-- <img class="card-user avatar avatar-large" src="images/jad.png"> -->
-          <a class="card-link" href="#"></a>
-        </div>
-        <div class="card-footer">
-          <p>Posted on 26/01/18</p>
-          <p> sion </p>
-        </div>
+        <% end %>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>">
